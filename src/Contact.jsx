@@ -32,10 +32,10 @@ const Contact = () => {
                 <div className="text-center mb-16">
                     <h2 className="font-semibold tracking-widest text-sm uppercase mb-4 relative">
                         <span className="absolute inset-0 bg-white h-1 transform -skew-x-12 -translate-y-2"></span>
-                        <span className="relative ">Let's Talk</span>
+                        <span className="relative">Let's Talk</span>
                     </h2>
-                    <p className="text-gray-300 text-3xl md:text-4xl lg:text-5xl  mb-8 bg-clip-text font-bold animate-pulse  ">
-                        CONNECT WITH ME THROUGH THE PLATFORMS BELOW OR SEND ME A MESSAGE DIRECTLY! 
+                    <p className="text-gray-300 text-3xl md:text-4xl lg:text-5xl mb-8 bg-clip-text font-bold animate-pulse">
+                        CONNECT WITH ME THROUGH THE PLATFORMS BELOW OR SEND ME A MESSAGE DIRECTLY!
                     </p>
                 </div>
                 <div className="flex justify-center mb-12 space-x-6">
@@ -53,7 +53,7 @@ const Contact = () => {
                     </a>
                 </div>
                 <div className="max-w-lg mx-auto">
-                    <form ref={form} onSubmit={sendEmail} className="bg-black bg-opacity-70 p-8 rounded-lg shadow-lg relative">
+                    <form ref={form} onSubmit={sendEmail} className="bg-black bg-opacity-0 p-8 rounded-lg shadow-lg relative border border-white shadow-white">
                         <h3 className="text-3xl font-bold mb-6 text-center relative">
                             <span className="absolute inset-0 text-white h-1 transform -skew-x-12 -translate-y-2"></span>
                             <span className="relative">Send a Message</span>
@@ -65,7 +65,7 @@ const Contact = () => {
                                 id="name"
                                 name="user_name"
                                 required
-                                className="w-full p-4 bg-black text-white rounded-lg border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-300"
+                                className="w-full p-4 bg-transparent text-white rounded-lg border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-300"
                             />
                         </div>
                         <div className="mb-4">
@@ -75,7 +75,7 @@ const Contact = () => {
                                 id="email"
                                 name="user_email"
                                 required
-                                className="w-full p-4 bg-black text-white rounded-lg border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-300"
+                                className="w-full p-4 bg-transparent text-white rounded-lg border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-300"
                             />
                         </div>
                         <div className="mb-4">
@@ -85,12 +85,12 @@ const Contact = () => {
                                 name="message"
                                 required
                                 rows="5"
-                                className="w-full p-4 bg-black text-white rounded-lg border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-300"
+                                className="w-full p-4 bg-transparent text-white rounded-lg border-2 border-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-300"
                             ></textarea>
                         </div>
                         <button
                             type="submit"
-                            className={`w-full p-4 text-white font-semibold rounded-lg focus:outline-none transition-colors duration-300 ${sending ? 'bg-gray-600 cursor-not-allowed' : 'bg-black text-white border border-white hover:scale-110'}`}
+                            className={`w-full p-4 text-white font-semibold rounded-lg focus:outline-none transition-colors duration-300 ${sending ? 'bg-gray-600 cursor-not-allowed' : 'bg-black bg-opacity-0 text-white border border-white hover:scale-110'}`}
                             disabled={sending}
                         >
                             {sending ? 'Sending...' : 'Send Message'}

@@ -83,7 +83,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative group  p-6 rounded-2xl shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
+              className="relative border-gray-400 border group  p-6 rounded-2xl shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
             >
               <div className="overflow-hidden rounded-xl mb-4">
                 <img

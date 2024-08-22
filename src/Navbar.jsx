@@ -32,7 +32,7 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Icon */}
-      <div className="md:hidden fixed top-0 left-0 right-0 bg-black bg-opacity-90 z-50 p-4 flex justify-between items-center">
+      <div className={`md:hidden fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center ${isOpen ? "bg-black opacity-90" : "bg-black bg-opacity-0"}`}>
         <div className="text-white text-3xl">
           <button onClick={toggleMenu} className="focus:outline-none">
             {isOpen ? <FaTimes /> : <FaBars />}
@@ -42,9 +42,9 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-90 z-40 transition-transform transform ${
+        className={`fixed inset-0 z-40 transition-transform transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        } bg-black opacity-90`}
       >
         <div className="flex justify-end p-4">
           <button onClick={toggleMenu} className="text-white text-3xl">

@@ -37,7 +37,7 @@ const Skills = () => {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="relative flex flex-col items-center p-6 bg-black bg-opacity-70 rounded-xl shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-opacity-80 group"
+              className="relative border-gray-400 flex flex-col items-center p-6 bg-black bg-opacity-0 rounded-xl shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-opacity-80 group"
             >
               <div className="relative mb-6 transition-transform duration-500 ease-in-out transform group-hover:rotate-12 group-hover:scale-125">
                 <div className="absolute inset-0 rounded-full  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -49,8 +49,8 @@ const Skills = () => {
               <p className="text-center text-gray-300 text-sm px-2">
                 {skill.description}
               </p>
-              <div className="absolute inset-0 rounded-xl border-2 border-gray-800 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-              <div className="absolute inset-0 rounded-xl border-2 border-gray-600 transform scale-110 opacity-50 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-125"></div>
+              <div className="absolute inset-0 rounded-xl border-2 border-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-xl border-2 border-gray-400 transform scale-110 opacity-50 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-125"></div>
             </div>
           ))}
         </div>

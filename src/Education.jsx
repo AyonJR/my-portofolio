@@ -46,7 +46,7 @@ const Education = () => {
                 </div>
               </div>
               <p className="text-gray-300">{education.description}</p>
-              <div className="absolute inset-0 rounded-lg border-2 border-gray-900 pointer-events-none transition-transform duration-500 ease-in-out group-hover:scale-110"></div>
+              <div className="absolute inset-0 rounded-lg border-2 border-gray-400 pointer-events-none transition-transform duration-500 ease-in-out group-hover:scale-110"></div>
             </div>
           ))}
         </div>

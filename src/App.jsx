@@ -5,16 +5,16 @@ import Hero from "./Hero";
 import Name from "./Name";
 import Navbar from "./Navbar";
 import Skills from "./Skills";
-import ParticlesBackground from "./ParticlesBackground";
 import Projects from "./Projects";
 import Education from "./Education";
 import Contact from "./Contact";
+import Design from "./Design";
 
 function App() {
   return (
     <>
       <div className="bg-black custom-font relative">
-        <ParticlesBackground />
+        <Design></Design>
         <div className="relative z-10">
           <div>
             <Name />
