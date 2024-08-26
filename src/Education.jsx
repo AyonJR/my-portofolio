@@ -1,5 +1,6 @@
 import React from "react";
 import { FaUserGraduate } from "react-icons/fa"; // Importing the bachelor icon
+import AnimatedText from "./components/ui/AnimatedText";
 
 const educationData = [
   {
@@ -13,6 +14,7 @@ const educationData = [
 ];
 
 const Education = () => {
+  const words = `LEARNING AND GROWING THROUGH EDUCATION AND EXPERIENCE.`;
   return (
     <div id="education" className="text-white py-12">
       <div className="container mx-auto px-8 md:px-20">
@@ -23,8 +25,8 @@ const Education = () => {
             </p>
           </div>
           <div className="w-full md:w-4/5">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text animate-pulse">
-              LEARNING AND GROWING THROUGH EDUCATION AND EXPERIENCE.
+            <h2 className="text-2xl  font-bold mb-4 bg-clip-text animate-pulse">
+              <AnimatedText words={words}></AnimatedText>
             </h2>
           </div>
         </div>

@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { FaEnvelope, FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import AnimatedText from './components/ui/AnimatedText';
 
 const Contact = () => {
+    const words = `CONNECT WITH ME THROUGH THE PLATFORMS BELOW OR SEND ME A MESSAGE DIRECTLY!`;
+
     const form = useRef();
     const [sending, setSending] = useState(false);
     const [success, setSuccess] = useState(null);
@@ -34,8 +37,8 @@ const Contact = () => {
                         <span className="absolute inset-0 bg-white h-1 transform -skew-x-12 -translate-y-2"></span>
                         <span className="relative">Let's Talk</span>
                     </h2>
-                    <p className="text-gray-300 text-3xl md:text-4xl lg:text-5xl mb-8 bg-clip-text font-bold animate-pulse">
-                        CONNECT WITH ME THROUGH THE PLATFORMS BELOW OR SEND ME A MESSAGE DIRECTLY!
+                    <p className="text-gray-300 text-2xl  mb-8 bg-clip-text font-bold animate-pulse">
+                        <AnimatedText words={words}></AnimatedText>
                     </p>
                 </div>
                 <div className="flex justify-center mb-12 space-x-6">

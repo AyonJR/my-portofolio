@@ -1,5 +1,6 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import AnimatedText from "./components/ui/AnimatedText";
 
 const projects = [
   {
@@ -16,7 +17,7 @@ const projects = [
       "Firebase",
       "Vercel",
       "JWT",
-      "Framer Motion"
+      "Framer Motion",
     ],
     liveLink: "https://final-assignment-12-ea1ec.web.app/",
     clientRepo: "https://github.com/AyonJR/Assignment-12-client",
@@ -45,7 +46,7 @@ const projects = [
     name: "Wonder Tour",
     image: "https://i.ibb.co/n1PCfBk/Screenshot-2024-07-03-234358.png",
     description:
-      "Explore the world Manage your account for personalized access, discover tourist spots globally with filters, view destinations on an interactive map, leave reviews adn share experience with others",
+      "Explore the world Manage your account for personalized access, discover tourist spots globally with filters, view destinations on an interactive map, leave reviews and share experiences with others.",
     technologies: [
       "Tailwind CSS",
       "Axios",
@@ -54,7 +55,7 @@ const projects = [
       "Express.js",
       "Firebase",
       "Vercel",
-      "AOS"
+      "AOS",
     ],
     liveLink: "https://assignment-10-343b7.web.app/",
     clientRepo: "https://github.com/AyonJR/Assignment-10-client",
@@ -63,77 +64,98 @@ const projects = [
 ];
 
 const Projects = () => {
+  const words = `DISCOVER THE PROJECTS BELOW TO SEE HOW I TRANSFORM CONCEPTS INTO REALITY WITH CREATIVE DESIGN AND DETAILED EXECUTION.`;
+
   return (
-    <div id="projects" className="text-white py-10">
-      <div className="container mx-auto px-8 md:px-20">
+    <div id="projects" className="py-16 bg-gray-100 dark:bg-transparent">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex flex-col md:flex-row items-center mb-12">
           <div className="w-full md:w-1/5 mb-8 md:mb-0">
-            <p className="font-semibold tracking-widest text-sm uppercase transform transition-transform duration-300 ease-in-out hover:translate-x-2">
+            <p className="font-semibold text-white tracking-widest text-sm uppercase transform transition-transform duration-300 ease-in-out hover:translate-x-2">
               PROJECTS
             </p>
           </div>
           <div className="w-full md:w-4/5">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text animate-pulse">
-              DISCOVER THE PROJECTS BELOW TO SEE HOW I TRANSFORM CONCEPTS INTO REALITY WITH CREATIVE DESIGN AND DETAILED EXECUTION.
-            </h2>
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 bg-clip-text animate-pulse">
+              <AnimatedText words={words} />
+            </h1>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="relative border-gray-400 border group  p-6 rounded-2xl shadow-xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
-            >
-              <div className="overflow-hidden rounded-xl mb-4">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="rounded-xl shadow-md group-hover:opacity-80 transition-opacity duration-500 transform group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-white transition-colors duration-300">
-                {project.name}
-              </h3>
-              <p className="text-gray-400 mb-4">{project.description}</p>
-              <div className="mb-4">
-                <span className="font-semibold text-gray-300">Technologies:</span>{" "}
-                {project.technologies.join(", ")}
-              </div>
-              <div className="flex justify-between items-center mt-6">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-blue-500 hover:text-blue-400 transition-colors duration-300"
-                >
-                  <FaExternalLinkAlt className="mr-2" />
-                  Live Demo
-                </a>
-                <div className="flex items-center space-x-4">
-                  <a
-                    href={project.clientRepo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-gray-400 hover:text-gray-300 transition-colors duration-300"
-                  >
-                    <FaGithub className="mr-2" />
-                    Client
-                  </a>
-                  <a
-                    href={project.serverRepo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-gray-400 hover:text-gray-300 transition-colors duration-300"
-                  >
-                    <FaGithub className="mr-2" />
-                    Server
-                  </a>
+        <div className="relative">
+          <div className="absolute inset-0 flex flex-col items-center">
+            <div className="w-1 bg-white absolute inset-0 left-1/2 transform -translate-x-1/2"></div>
+          </div>
+
+          <div className="space-y-12">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={`relative bg-white dark:bg-transparent shadow-lg rounded-xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl ${index % 2 === 0 ? 'md:ml-12 lg:ml-24 xl:ml-48' : 'md:mr-12 lg:mr-24 xl:mr-48'} mx-auto max-w-4xl`}
+              >
+                <div className={`absolute w-4 h-4 bg-white rounded-full top-1/2 transform -translate-y-1/2 ${index % 2 === 0 ? '-left-2' : '-right-2'}`}></div>
+                <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
+                  <div className="w-full mb-4 md:w-1/2 md:mb-0">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-60 object-cover rounded-xl"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 md:pl-6">
+                    <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                      {project.name}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="text-sm font-medium text-white "
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-4 py-2 bg-white text-black rounded-lg hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+                      >
+                        <FaExternalLinkAlt className="mr-2" />
+                        Live Demo
+                      </a>
+                      <div className="flex items-center space-x-4">
+                        <a
+                          href={project.clientRepo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors"
+                        >
+                          <FaGithub className="mr-2" />
+                          Client
+                        </a>
+                        <a
+                          href={project.serverRepo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors"
+                        >
+                          <FaGithub className="mr-2" />
+                          Server
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div className="absolute inset-0 rounded-xl border-2 border-gray-300 dark:border-gray-700 pointer-events-none"></div>
               </div>
-              <div className="absolute inset-0 rounded-2xl border-2 border-gray-700 pointer-events-none transition-transform duration-500 ease-in-out group-hover:scale-110"></div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

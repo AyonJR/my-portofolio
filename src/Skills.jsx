@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCss3Alt, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import { FaCss3Alt, FaReact, FaNodeJs, FaDatabase, FaServer } from "react-icons/fa"; // Import a server icon for Express.js
 
 const skills = [
   {
@@ -22,6 +22,11 @@ const skills = [
     icon: <FaDatabase className="text-6xl text-green-700" />,
     description: "A NoSQL database that provides high performance, high availability, and easy scalability.",
   },
+  {
+    name: "Express.js", // Add Express.js to the skills array
+    icon: <FaServer className="text-6xl text-gray-600" />, // Use a relevant icon
+    description: "A web application framework for Node.js that simplifies the development of server-side applications.",
+  },
 ];
 
 const Skills = () => {
@@ -33,14 +38,14 @@ const Skills = () => {
             My Skills
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2"> {/* Adjusted for 5 columns */}
           {skills.map((skill) => (
             <div
               key={skill.name}
               className="relative border-gray-400 flex flex-col items-center p-6 bg-black bg-opacity-0 rounded-xl shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-opacity-80 group"
             >
               <div className="relative mb-6 transition-transform duration-500 ease-in-out transform group-hover:rotate-12 group-hover:scale-125">
-                <div className="absolute inset-0 rounded-full  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 {skill.icon}
               </div>
               <h3 className="text-2xl font-semibold mb-2 text-white text-center transform transition-transform duration-500 ease-in-out group-hover:scale-110">

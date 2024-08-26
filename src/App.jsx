@@ -9,19 +9,28 @@ import Projects from "./Projects";
 import Education from "./Education";
 import Contact from "./Contact";
 import Design from "./Design";
+import ImageParticles from "./ImageParticles";
+import { ThreeDCardDemo } from "./Test";
+import TimelineDemo from "./TimeLineDemo";
 
 function App() {
   return (
     <>
-      <div className="bg-black custom-font relative">
-        <Design></Design>
-        <div className="relative z-10">
+      <div className=" custom-font relative">
+        <div className="flex justify-center ">
           <div>
-            <Name />
+            <Design></Design>
           </div>
-          <div>
+         
+        </div>
+        <div className="relative z-10">
+          
+          
+          
+          <div className="">
             <Navbar />
           </div>
+          
           <div className="mt-12">
             <Hero />
           </div>
@@ -35,7 +44,7 @@ function App() {
             <Projects></Projects>
           </div>
           <div className="mt-10">
-           <Education></Education>
+            <Education></Education>
           </div>
           <div>
             <Contact></Contact>

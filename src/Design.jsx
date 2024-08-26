@@ -26,9 +26,9 @@ const Design = () => {
           options={{
             background: {
               color: {
-                value: "#05081C",
+                value: "#000000", // Black background color
               },
-              image: "linear-gradient(135deg, #05081C 0%, #1e3a8a 100%)",
+              image: "linear-gradient(135deg, #000000 0%, #092e85 100%)", 
               position: "50% 50%",
               repeat: "no-repeat",
               size: "cover",
@@ -58,7 +58,7 @@ const Design = () => {
             },
             particles: {
               color: {
-                value: ["#ffffff", "#3b82f6", "#60a5fa"],
+                value: ["#ffffff", "#60a5fa", "#3b82f6"],
               },
               links: {
                 color: "#ffffff",

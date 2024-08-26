@@ -8,7 +8,7 @@ const Hero = () => {
         {/* text div */}
         <div className="flex-1 animate-fade-in-up text-center md:text-left">
           <p className="font-semibold tracking-widest text-sm">
-            AVAILABLE FOR WORK
+            ABDUL BASET
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-3 font-bold bg-clip-text animate-pulse tracking-tight leading-tight text-shadow ">
             A WEB DEVELOPER
