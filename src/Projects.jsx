@@ -5,7 +5,7 @@ import AnimatedText from "./components/ui/AnimatedText";
 const projects = [
   {
     name: "LabX",
-    image: "https://i.ibb.co/wYGdRzt/Screenshot-2024-07-03-235021.png",
+    image: "https://i.ibb.co.com/3WTsx2G/Screenshot-2024-09-27-232813.png",
     description:
       "LabX is a centralized hub for educational resources, collaboration, and project management, tailored to the needs of students and educators in the scientific community.",
     technologies: [
@@ -22,6 +22,24 @@ const projects = [
     liveLink: "https://final-assignment-12-ea1ec.web.app/",
     clientRepo: "https://github.com/AyonJR/Assignment-12-client",
     serverRepo: "https://github.com/AyonJR/Assignment-12-server",
+  },
+  {
+    name: "Casa",
+    image: "https://i.ibb.co.com/4YVpg8s/Screenshot-2024-09-27-233659.png",
+    description:
+      "Casa is a frontend-focused project with sleek, responsive designs for a smooth user experience. It also includes backend features like user authentication, property management, and wishlist functionality.",
+    technologies: [
+      "Tailwind CSS",
+      "Axios",
+      "React",
+      "MongoDB",
+      "Express.js",
+      "Firebase",
+      "Vercel",
+    ],
+    liveLink: "https://real-state-e6d99.web.app/",
+    clientRepo: "https://github.com/AyonJR/Casa",
+    serverRepo: "https://github.com/AyonJR/real-state-server",
   },
   {
     name: "TechQuery",
@@ -61,6 +79,25 @@ const projects = [
     clientRepo: "https://github.com/AyonJR/Assignment-10-client",
     serverRepo: "https://github.com/AyonJR/Assignment-10-server",
   },
+  {
+    name: "Gribbaple",
+    image: "https://i.ibb.co.com/KwYFk5c/Screenshot-2024-09-27-234438.png",
+    description:
+      "GRIPPABLE is an innovative platform designed to provide users with a seamless experience in browsing and purchasing real estate properties online. The platform is built with a focus on efficiency, user-friendly navigation, and responsive design, ensuring it’s accessible on all devices.",
+    technologies: [
+      "Tailwind CSS",
+      "Axios",
+      "React",
+      "MongoDB",
+      "Express.js",
+      "Firebase",
+      "Vercel",
+      "AOS",
+    ],
+    liveLink: "https://job-task-dd5c5.web.app/",
+    clientRepo: "https://github.com/AyonJR/Assignment10-JobTask",
+    serverRepo: "https://github.com/AyonJR/Assignment10-JobTask-server",
+  },
 ];
 
 const Projects = () => {
@@ -84,7 +121,7 @@ const Projects = () => {
 
         <div className="relative">
           <div className="absolute inset-0 flex flex-col items-center">
-            <div className="w-1 bg-white absolute inset-0 left-1/2 transform -translate-x-1/2"></div>
+            <div className="w-[2px] hidden lg:block bg-white absolute inset-0 left-1/2 transform -translate-x-1/2"></div>
           </div>
 
           <div className="space-y-12">
